@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "plexos-excel-api10": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\\\Users\\\\flean\\\\source\\\\repos\\\\plexos-excel-api10\\\\plexos-excel-api10\\\\work\\\\test.xlsx\" \"Sheet1\" \"C:\\\\Users\\\\flean\\\\source\\\\repos\\\\plexos-excel-api10\\\\plexos-excel-api10\\\\work\\\\test.xml\" (out)"
+    }
+  }
+}

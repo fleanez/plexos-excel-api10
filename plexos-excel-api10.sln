@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plexos-excel-api10", "plexos-excel-api10\plexos-excel-api10.csproj", "{D1B32623-4025-4CE8-AD40-4F21CF86C636}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1B32623-4025-4CE8-AD40-4F21CF86C636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B32623-4025-4CE8-AD40-4F21CF86C636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B32623-4025-4CE8-AD40-4F21CF86C636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B32623-4025-4CE8-AD40-4F21CF86C636}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD32B5BD-22D0-4C8E-9F1B-927218927FD9}
+	EndGlobalSection
+EndGlobal
