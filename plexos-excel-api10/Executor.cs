@@ -13,7 +13,9 @@ namespace plexos_excel_api_10
 {
     internal class Executor
     {
-        
+
+        private static readonly String DEFAULT_SUFFIXE = "(MOD)";
+
         public static bool AddObject(DatabaseCore db, PObject obj)
         {
             int ret = 0;
@@ -241,15 +243,15 @@ namespace plexos_excel_api_10
             Console.WriteLine("   [CONFIG_EXCEL_FILE]     Path to Excel config file");
             Console.WriteLine("   [CONFIG_EXCEL_SHEET]    Excel's sheet name (case sensitive)");
             Console.WriteLine("   [PLEXOS_XML_FILE]       PLEXOS input database (xml) to be modified");
-            Console.WriteLine("   [SUFFIXE]               (optional) Suffixe to be appended to the resulting modified PLEXOS input database. (Default=MOD)");
+            Console.WriteLine($"   [SUFFIXE]               (optional) Suffixe to be appended to the resulting modified PLEXOS input database. (Default={DEFAULT_SUFFIXE})");
         }
 
         static void Main(string[] args)
         {
-            String strConfigFile = "C:\\Users\\flean\\Desktop\\h2\\test.xlsx";
-            String strSheetName = "Sheet1";
-            String strPLEXOSFile = "C:\\Users\\flean\\Desktop\\h2\\test.xml";
-            String strSuffix = "(MOD)";
+            String strConfigFile;
+            String strSheetName;
+            String strPLEXOSFile;
+            String strSuffix;
             if (args.Length < 3)
             {
                 Console.WriteLine("Parameters are not optional");
@@ -257,17 +259,14 @@ namespace plexos_excel_api_10
                 Console.ReadKey();
                 System.Environment.Exit(1);
             }
-            else if (args.Length >= 3)
+            strConfigFile = args[0];
+            strSheetName = args[1];
+            strPLEXOSFile = args[2];
+            strSuffix = DEFAULT_SUFFIXE;
+            if (args.Length >= 4)
             {
-                strConfigFile = args[0];
-                strSheetName = args[1];
-                strPLEXOSFile = args[2];
-                if (args.Length >= 4)
-                {
-                    strSuffix = args[3];
-                }
+                strSuffix = args[3];
             }
-
             //Read config:
             Reader r = new Reader(strConfigFile, strSheetName);
 
